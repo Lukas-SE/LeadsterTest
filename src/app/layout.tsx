@@ -1,9 +1,11 @@
 import "./globals.css";
 import { Plus_Jakarta_Sans } from "next/font/google";
-import Banner from "@/components/Banner";
 import Navbar from "@/components/Navbar";
 
-const PlusJakartaSans = Plus_Jakarta_Sans({ subsets: ["latin"] });
+const PlusJakartaSans = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Leadster",
@@ -19,7 +21,6 @@ export default function RootLayout({
     <html lang="pt">
       <body className={PlusJakartaSans.className}>
         <Navbar />
-        <Banner />
         {children}
       </body>
     </html>
