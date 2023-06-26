@@ -6,10 +6,32 @@
     .leadster-btn {
         @apply bg-leadster-400 text-white outline-none rounded-full uppercase font-bold py-6 px-5 md:px-11;
     }
-    .leadster-btn-sm {
-        @apply rounded-full text-base py-2 px-6 font-semibold outline-none;
+    .leadster-select {
+        @apply whitespace-nowrap rounded-full text-sm lg:text-base py-[0.375rem] px-5 font-semibold outline-none text-leadster-0 bg-transparent border border-leadster-0 duration-300 hover:border-leadster-400 hover:text-leadster-400 transition-colors;
+    }
+    .leadster-select-active {
+        @apply leadster-select border-none text-white duration-100 bg-leadster-400 transition-colors hover:bg-[#3E9DFF] hover:text-white;
     }
     .leadster-paginator {
         @apply outline-none;
     }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+.no-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select::-ms-expand {
+    display: none;
 }

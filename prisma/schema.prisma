@@ -11,7 +11,7 @@ datasource db {
 model Videos {
   id          String   @id @default(cuid())
   name        String
-  url         String   @unique
+  url         String
   description String?
   createdAt   DateTime @default(now())
   category    Category @relation(fields: [categoryId], references: [id])

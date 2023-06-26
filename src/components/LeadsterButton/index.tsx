@@ -1,12 +1,30 @@
 interface IProps {
-    variation?: "small" | "paginator",
-    children: string,
+  variation?: "select" | "paginator";
+  children: string;
+  active?: boolean;
+  click?(): void;
 }
 
-export default function LeadsterText( {variation, children}: IProps ) {
-    return (
-      <button className={variation == "small" ? "leadster-btn-sm" : variation == "paginator" ? "leadster-paginator" : "leadster-btn"}>
-        {children}
-      </button>
-    )
+export default function LeadsterText({
+  variation,
+  children,
+  click,
+  active,
+}: IProps) {
+  return (
+    <button
+      onClick={click}
+      className={
+        variation == "select"
+          ? active == true
+            ? "leadster-select-active"
+            : "leadster-select"
+          : variation == "paginator"
+          ? "leadster-paginator"
+          : "leadster-btn"
+      }
+    >
+      {children}
+    </button>
+  );
 }
