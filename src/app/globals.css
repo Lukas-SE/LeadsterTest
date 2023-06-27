@@ -13,7 +13,7 @@
         @apply leadster-select border-none text-white duration-100 bg-leadster-400 transition-colors hover:bg-[#3E9DFF] hover:text-white;
     }
     .leadster-paginator {
-        @apply outline-none;
+        @apply outline-none border border-leadster-400 rounded-lg text-leadster-400 font-extrabold aspect-square w-10 text-xl;
     }
 }
 

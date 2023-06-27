@@ -20,7 +20,7 @@ export default function LeadsterText({
             ? "leadster-select-active"
             : "leadster-select"
           : variation == "paginator"
-          ? "leadster-paginator"
+          ? active == true ? "leadster-paginator" : "font-medium text-leadster-0 hover:text-leadster-400 transition-all duration-300 aspect-square w-10 text-xl"
           : "leadster-btn"
       }
     >
