@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Modal from "../Modal";
 import { AnimatePresence } from "framer-motion";
 import { useState } from "react";
@@ -16,7 +15,7 @@ interface IProps {
   name: string;
 }
 
-export default function index({ data, name }: IProps) {
+export default function Card({ data, name }: IProps) {
   const [modalOpen, setModalOpen] = useState(false);
   function handleModal() {
     setModalOpen(!modalOpen);
@@ -54,7 +53,7 @@ export default function index({ data, name }: IProps) {
                   <p className="border-b-2 border-leadster-0 border-opacity-20 pb-1">
                     Descrição
                   </p>
-                  <p className="font-normal pt-1 max-h-24 overflow-y-scroll">
+                  <p className="font-normal pt-1 max-h-24 overflow-y-scroll scroll-sm">
                     {data.description != ""
                       ? data.description
                       : "Sem descrição..."}
@@ -93,11 +92,10 @@ export default function index({ data, name }: IProps) {
           </svg>
         </div>
         <div className="h-[12.5rem] relative w-full overflow-hidden rounded-t-2xl cursor-pointer">
-          <Image
-            className="object-cover"
-            src={data.imageurl ?? "/images/thumbnail.png"}
+          <img
+            className="object-cover h-full w-full"
+            src={data.imageurl ? (data.imageurl !== "" ? data.imageurl : "/images/thumbnail.png") : "/images/thumbnail.png"}
             alt="thumbnail"
-            fill={true}
           />
         </div>
         <div className="h-[88px] w-full bg-white overflow-hidden rounded-b-2xl flex items-center px-8">

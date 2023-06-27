@@ -7,10 +7,10 @@
         @apply bg-leadster-400 text-white outline-none rounded-full uppercase font-bold py-6 px-5 md:px-11;
     }
     .leadster-select {
-        @apply whitespace-nowrap rounded-full text-sm lg:text-base py-[0.375rem] px-5 font-semibold outline-none text-leadster-0 bg-transparent border border-leadster-0 duration-300 hover:border-leadster-400 hover:text-leadster-400 transition-colors;
+        @apply hover:scale-[0.9] transition-all whitespace-nowrap rounded-full text-sm lg:text-base py-[0.375rem] px-5 font-semibold outline-none text-leadster-0 bg-transparent border border-leadster-0 duration-300 hover:border-leadster-400 hover:text-leadster-400;
     }
     .leadster-select-active {
-        @apply leadster-select border-none text-white duration-100 bg-leadster-400 transition-colors hover:bg-[#3E9DFF] hover:text-white;
+        @apply leadster-select border-none text-white duration-300 bg-leadster-400 hover:bg-[#3E9DFF] hover:text-white;
     }
     .leadster-paginator {
         @apply outline-none border border-leadster-400 rounded-lg text-leadster-400 font-extrabold aspect-square w-10 text-xl;
@@ -34,4 +34,17 @@ select {
 
 select::-ms-expand {
     display: none;
+}
+
+.scroll-sm::-webkit-scrollbar {
+    width: 0.5em;
+}
+
+.scroll-sm::-webkit-scrollbar-track {
+    background-color: #F0F8FF;
+}
+  
+.scroll-sm::-webkit-scrollbar-thumb {
+    background-color: #0083FF;
+    border-radius: 9999px;
 }

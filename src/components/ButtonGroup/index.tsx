@@ -6,9 +6,15 @@ import Select from "../Select";
 
 interface IProps {
   categories: { name: string }[];
+  handler(category: string): void;
 }
 
-export default function ButtonGroup({ categories }: IProps) {
+export default function ButtonGroup({ categories, handler }: IProps) {
+  function handleClick(data: string, index: number) {
+    handler(data);
+    setToggle(index);
+    
+  }
   const [toggle, setToggle] = useState(0);
   return (
       <div className="w-full justify-between relative flex flex-col items-center lg:items-end lg:flex-row pt-4 pb-7">
@@ -18,7 +24,7 @@ export default function ButtonGroup({ categories }: IProps) {
             <LeadsterButton
               variation="select"
               click={() => {
-                setToggle(i);
+                handleClick(name, i)
               }}
               active={i == toggle ? true : false}
               key={name}

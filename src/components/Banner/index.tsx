@@ -1,8 +1,10 @@
 import Image from "next/image";
+import Wave from "../Wave";
 export default function Banner() {
   return (
-    <div className="flex flex-1 items-center justify-center bg-leadster-100 h-[62vh] flex-col lg:mb-14">
-      <div className="rounded-[0.9rem] rounded-bl-[0.25rem] border-2 border-leadster-400 p-1 px-5 mb-5">
+    <div className="flex flex-1 items-center justify-center bg-leadster-100 h-[62vh] flex-col lg:mb-14 relative -z-50">
+      <Wave color1="#F0F8FF" color2="#FFFFFF" className="w-full h-1/2 absolute bottom-0 -z-40"/>
+      <div className="rounded-[0.9rem] rounded-bl-[0.25rem] border-2 border-leadster-400 p-1 px-5 mb-5 animate-bounce">
         <p className="text-leadster-400 font-extrabold text-sm">
           WEBINARS EXCLUSIVOS
         </p>

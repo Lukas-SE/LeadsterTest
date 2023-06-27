@@ -7,9 +7,10 @@ import LeadsterButton from "@/components/LeadsterButton";
 
 export default function DemoSection() {
   return (
-    <section className="bg-leadster-100 pt-16 flex flex-col lg:flex-row flex-1 text-leadster-0 font-medium items-center">
-      <div className="flex flex-1 items-end justify-center lg:justify-end shrink-0">
-        <Image src={Comparativo} alt="comparativo" />
+    <section className="bg-leadster-100 pt-16 flex flex-col lg:flex-row flex-1 text-leadster-0 font-medium items-center pb-16 lg:pb-0">
+      <div className="flex flex-1 items-end justify-center relative lg:justify-end shrink-0 overflow-hidden">
+        <div className="absolute w-full aspect-square rounded-[7rem] rotate-45 top-40 -left-72 bg-[#E6F3FF]"></div>
+        <Image className="z-10" src={Comparativo} alt="comparativo" />
       </div>
       <section className="flex flex-col flex-1 items-start justify-center ">
         <div className="lg:pl-24">

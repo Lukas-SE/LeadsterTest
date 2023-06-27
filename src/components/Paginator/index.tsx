@@ -6,9 +6,9 @@ interface IProps {
   current: number;
 }
 
-export default function index({ pages, current, handle }: IProps) {
+export default function Paginator({ pages, current, handle }: IProps) {
   return (
-    <div className="flex flex-1 items-center justify-center text-lg text-leadster-0">
+    <div className="flex flex-1 items-center justify-center text-lg text-leadster-0 space-x-2">
       <p className="font-bold">Página</p>
       {pages &&
         [...Array(pages)].map((item, i) => (
